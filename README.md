@@ -1,62 +1,52 @@
-# Node.js – JWT Authentication & Authorization example with JSONWebToken & Sequelize
+# Mondly
+Mondly is in the top 3 mobile language learning platforms worldwide and helps over 75 million people from 190 countries learn 41+ languages.
 
-## User Registration, User Login and Authorization process.
-The diagram shows flow of how we implement User Registration, User Login and Authorization process.
+# Project Outline
+Build a web app to manage the contents of a website.
 
-![jwt-token-authentication-node-js-example-flow](jwt-token-authentication-node-js-example-flow.png)
+## Node.js Backend
+- Uses Express for routing
+- MySQL as database, define Model schemas
+- file gets parsed via Node server
+- JavaScript Methods for SQL queries with Database interactions are happening inside server.js
 
-For more detail, please visit:
-> [Node.js JWT Authentication & Authorization example](https://bezkoder.com/node-js-jwt-authentication-mysql/)
+## React.js with Next.js Frontend
+- Uses Google Material design with Next.js
+- Data management by React-Redux/Hooks
+- Functionality: Content posts/view, multi-language by localization. 
 
-You may need to implement Refresh Token:
 
-![jwt-refresh-token-node-js-example-flow](jwt-refresh-token-node-js-example-flow.png)
 
-> [Node.js JWT Refresh Token example](https://bezkoder.com/jwt-refresh-token-node-js/)
-
-Working with Front-end:
-> [Vue.js JWT Authentication with Vuex and Vue Router](https://bezkoder.com/jwt-vue-vuex-authentication/)
-
-> [Angular 8 JWT Authentication with HttpInterceptor and Router](https://bezkoder.com/angular-jwt-authentication/)
-
-> [Angular 10 JWT Authentication with HttpInterceptor and Router](https://bezkoder.com/angular-10-jwt-auth/)
-
-> [Angular 11 JWT Authentication with HttpInterceptor and Router](https://bezkoder.com/angular-11-jwt-auth/)
-
-> [React JWT Authentication & Authorization (without Redux) example](https://bezkoder.com/react-jwt-auth/)
-
-> [React Redux JWT Authentication & Authorization example](https://bezkoder.com/react-redux-jwt-auth/)
-
-## More Practice:
-> [Build Node.js Rest APIs with Express, Sequelize & MySQL](https://bezkoder.com/node-js-express-sequelize-mysql/)
-
-> [Server side Pagination in Node.js with Sequelize and MySQL](https://bezkoder.com/node-js-sequelize-pagination-mysql/)
-
-> [Node.js Express File Upload Rest API example](https://bezkoder.com/node-js-express-file-upload/)
-
-> [Node.js Express File Upload with Google Cloud Storage example](https://bezkoder.com/google-cloud-storage-nodejs-upload-file/)
-
-Associations:
-> [Sequelize Associations: One-to-Many Relationship example](https://bezkoder.com/sequelize-associate-one-to-many/)
-
-> [Sequelize Associations: Many-to-Many Relationship example](https://bezkoder.com/sequelize-associate-many-to-many/)
-
-Deployment:
-> [Deploying/Hosting Node.js app on Heroku with MySQL database](https://bezkoder.com/deploy-node-js-app-heroku-cleardb-mysql/)
-
-Integration on same Server/Port:
-> [Integrate Angular 8 with Node.js Express](https://bezkoder.com/integrate-angular-8-node-js/)
-
-> [Integrate Angular 10 with Node.js Express](https://bezkoder.com/integrate-angular-10-node-js/)
-
-> [Integrate React with Node.js Express](https://bezkoder.com/integrate-react-express-same-server-port/)
-
-## Project setup
+## Development
+Set your .db.config.js variables in app/config.
 ```
-npm install
+module.exports = {
+  HOST: 'localhost',
+  USER: 'root',
+  PASSWORD: '',
+  DB: 'andreea_content',
+  dialect: 'mysql',
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+};
+
 ```
 
-### Run
+Node server playground can be reached at localhost:8080. The app will run at localhost:3000
+
+
+Run the following command in the root folder. This will start up both the node backend AND the React frontend which is located in /client
 ```
-node server.js
+npm run dev
 ```
+
+## A friendly reminder
+Use caution with npm and the folders. 
+**There are two package.json files.** One for backend (root folder) and one for React frontend (client folder).
+
+To manage and add React.js dependencies you need to move to the client folder and run npm there.
+
