@@ -1,46 +1,52 @@
+# Mondly
+Mondly is in the top 3 mobile language learning platforms worldwide and helps over 75 million people from 190 countries learn 41+ languages.
 
-# Localization Content
+# Project Outline
+Build a web app to manage the contents of a website.
+
+## Node.js Backend
+- Uses Express for routing
+- MySQL as database, define Model schemas
+- file gets parsed via Node server
+- JavaScript Methods for SQL queries with Database interactions are happening inside server.js
+
+## React.js with Next.js Frontend
+- Uses Google Material design with Next.js
+- Data management by React-Redux/Hooks
+- Functionality: Content posts/view, multi-language by localization. 
 
 
-This project is for localization when a user posts their content.
 
-## Installation
+## Development
+Set your .db.config.js variables in app/config.
+```
+module.exports = {
+  HOST: 'localhost',
+  USER: 'root',
+  PASSWORD: '',
+  DB: 'andreea_content',
+  dialect: 'mysql',
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
+};
 
-In root folder.
-
-```bash
-npm install
 ```
 
-After installation for server.
+Node server playground can be reached at localhost:8080. The app will run at localhost:3000
 
-```bash
-cd client
+
+Run the following command in the root folder. This will start up both the node backend AND the React frontend which is located in /client
 ```
-/client folder
-
-```bash
-npm install
-```
-## Usage
-
-```python
-import foobar
-
-# returns 'words'
-foobar.pluralize('word')
-
-# returns 'geese'
-foobar.pluralize('goose')
-
-# returns 'phenomenon'
-foobar.singularize('phenomena')
+npm run dev
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## A friendly reminder
+Use caution with npm and the folders. 
+**There are two package.json files.** One for backend (root folder) and one for React frontend (client folder).
 
-Please make sure to update tests as appropriate.
+To manage and add React.js dependencies you need to move to the client folder and run npm there.
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
