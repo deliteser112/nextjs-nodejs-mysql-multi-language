@@ -10,13 +10,13 @@ module.exports = (sequelize, Sequelize) => {
       type: Sequelize.STRING
     },
     paragraph: {
-      type: Sequelize.STRING
+      type: Sequelize.TEXT
     },
     htitle: {
       type: Sequelize.STRING
     },
     hdtitle: {
-      type: Sequelize.STRING
+      type: Sequelize.TEXT
     },
     createdAt: {
       type: 'TIMESTAMP',

@@ -35,9 +35,9 @@ function initial() {
   });
   User.create({
     id: 1,
-    firstname: 'Mo',
-    lastname: 'Riss',
-    email: 'thimble@root.com',
+    firstname: 'Andreea',
+    lastname: 'Alex',
+    email: 'andreea@admin.com',
     password: bcrypt.hashSync('asdf', 8)
   }).then((userData) => {
     userData.setRoles([1]);
